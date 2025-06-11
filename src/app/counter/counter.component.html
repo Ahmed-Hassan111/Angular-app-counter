@@ -1,0 +1,21 @@
+<div class="counter-container">
+  <h1>Counter</h1>
+  <div class="counter-display">
+    <p>Current Count: {{ counter }}</p>
+  </div>
+  <div class="counter-controls">
+    <button (click)="increment()">Increment</button>
+    <button (click)="decrement()">Decrement</button>
+    <button (click)="reset()">Reset</button>
+  </div>
+
+  <div [ngSwitch]="getCounterState()">
+    <p *ngSwitchCase="'positive'" [ngClass]="'positive'">
+      The counter is positive.
+    </p>
+    <p *ngSwitchCase="'negative'" [ngClass]="'negative'">
+      The counter is negative.
+    </p>
+    <p *ngSwitchCase="'neutral'" [ngClass]="'neutral'">The counter is zero.</p>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 40px 20px;
+}
+
+.counter-display {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #4f46e5;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 8px #c7d2fe;
+}
+
+.counter-controls {
+  display: flex;
+  gap: 20px;
+}
+
+.counter-controls button {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
+}
+
+.counter-controls button:hover {
+  background: #4338ca;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.counter-controls button:active {
+  background: #3730a3;
+  transform: scale(0.98);
+}
+//copy and paste it to counter.component.scss
+
+p.positive {
+  color: #22c55e;
+  //font-weight: bold;
+  background: #dcfce7;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 18px;
+  animation: glow 0.7s ease-in-out infinite alternate;
+  font-size: 1.4rem;
+}
+
+p.neutral {
+  color: #64748b;
+  font-weight: 500;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 18px;
+  font-size: 1.4rem;
+}
+
+p.negative {
+  color: #ef4444;
+  font-weight: bold;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 18px;
+  animation: shake 0.4s;
+  font-size: 1.4rem;
+}
+
+/* Optional: Add a shake animation for negative state */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Already in your file: */
+// @keyframes glow {
+//   0% {
+//     text-shadow: 0 0 5px #28a745, 0 0 10px #28a745, 0 0 15px #28a745;
+//   }
+//   50% {
+//     text-shadow: 0 0 10px #28a745, 0 0 20px #28a745, 0 0 25px #28a745;
+//   }
+//   100% {
+//     text-shadow: 0 0 5px #28a745, 0 0 10px #28a745, 0 0 15px #28a745;
+//   }
+//}

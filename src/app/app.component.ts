@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { CounterComponent } from './counter/counter.component';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CounterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'counter';
+  // This is the main component of the application, which includes the CounterComponent.
 }
